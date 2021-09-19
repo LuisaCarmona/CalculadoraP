@@ -1,4 +1,5 @@
 <template>
+  <div>
     <v-app-bar
       absolute
       color="blue"
@@ -21,13 +22,14 @@
 
       <v-btn icon>
         <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
+      </v-btn> 
     </v-app-bar>
+  </div>
 </template>
 
 <script>
 export default {
-
+   
 }
 </script>
 
