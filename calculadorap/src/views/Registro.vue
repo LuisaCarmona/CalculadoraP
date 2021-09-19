@@ -1,5 +1,5 @@
 <template>
-  <div id="login">
+  <div id="registro">
     <v-card class="mx-auto" outlined>
       <div id = "cabecera_registro">
        <h2>REGISTRO DE USUARIOS</h2>
@@ -38,9 +38,10 @@ export default {
 </script>
 
 <style lang = "scss">
-#login {
+#registro {
   width: 30%;
   margin-left: 40%;
+  margin-top: 1%;
 }
 
 #cabecera_registro{
