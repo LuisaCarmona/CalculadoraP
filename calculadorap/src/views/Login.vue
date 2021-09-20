@@ -2,7 +2,7 @@
   <div id = "login" >
     <v-card class="mx-auto" outlined>
       <div id="cabecera_login">
-        <h2>LOGIN</h2>
+        <h2>INICIO DE SESIÓN </h2>
       </div>
       <v-card-text class="text--primary">
         <v-text-field label="Correo electrónico" outlined></v-text-field>

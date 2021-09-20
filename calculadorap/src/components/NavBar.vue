@@ -13,7 +13,7 @@
       <v-spacer></v-spacer>
 
       <router-link to="/login" style="text-decoration: none"><v-btn text large class="ma-2">
-        Login
+        Iniciar sesión
       </v-btn></router-link>
 
       <router-link to="/sign-in" style="text-decoration: none"><v-btn text large class="ma-2">
