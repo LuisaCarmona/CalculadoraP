@@ -1,5 +1,8 @@
 <template>
-  <div class= "home"></div>
+  <div class= "home">
+    <img src="../assets/img/fondo.jpg" style="width:100%">
+  </div>
+
 </template>
 
 <script>

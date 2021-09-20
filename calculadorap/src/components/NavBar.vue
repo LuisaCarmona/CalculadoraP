@@ -6,9 +6,8 @@
       scroll-target="#scrolling-techniques-7"
     >
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
-
+      
       <v-toolbar-title>CALCULADORA PECUARIA</v-toolbar-title>
-
       <v-spacer></v-spacer>
 
       <router-link to="/login" style="text-decoration: none"><v-btn text large class="ma-2">
