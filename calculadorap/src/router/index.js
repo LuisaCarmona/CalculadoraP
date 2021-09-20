@@ -16,17 +16,17 @@ const routes = [
   {
     path: '/login',
     name: 'Login',
-    component: Login
+    component: () => import('../views/Login.vue')
   },
   {
     path: '/sign-in',
     name: 'Registro',
-    component: Registro
+    component: () => import('../views/Registro.vue')
   },
   {
     path: '/dashboard',
     name: 'Dashboard',
-    component: Dashboard
+    component: () => import('../views/Dashboard.vue')
   },
   
 ]
