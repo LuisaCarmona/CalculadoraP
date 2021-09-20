@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <NavBar></NavBar>
-    <v-main class="main">
-      <v-container class="main" fluid>
+    <v-main class="fondo">
+      <v-container class="fondo" fluid>
         <router-view></router-view>
       </v-container>
     </v-main>

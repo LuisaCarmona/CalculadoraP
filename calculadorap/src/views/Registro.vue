@@ -36,25 +36,3 @@ export default {
   }
 };
 </script>
-
-<style lang = "scss">
-#registro {
-  width: 30%;
-  margin-left: 40%;
-  margin-top: 1%;
-}
-
-#cabecera_registro{
-  background:rgb(0, 119, 255);
-  height: 30%;
-  text-align: center;
-  color: white;
-}
-
-#btn_registrar{
-  margin-left: 40%;
-  background:rgb(0, 119, 255);
-  color: white;
-}
-
-</style>
