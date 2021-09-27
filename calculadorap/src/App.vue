@@ -1,22 +1,20 @@
 <template>
-  <v-app>
+  <v-app id="fondo">
     <NavBar></NavBar>
     <v-main class="fondo">
       <v-container class="fondo" fluid>
         <router-view></router-view>
       </v-container>
     </v-main>
-  </v-app>  
+  </v-app>
 </template>
 
 <script>
 import NavBar from "./components/NavBar.vue";
-
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    NavBar
-  }
-  
+    NavBar,
+  },
 };
 </script>

@@ -4,6 +4,8 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
 import './assets/css/styles.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import jquery from 'jquery'
 
 Vue.config.productionTip = false
 

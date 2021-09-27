@@ -3,7 +3,6 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Registro from '../views/Registro.vue'
-import Dashboard from '../views/Dashboard.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +26,21 @@ const routes = [
     path: '/dashboard',
     name: 'Dashboard',
     component: () => import('../views/Dashboard.vue')
+  },
+  {
+    path: '/insumos',
+    name: 'Insumos',
+    component: () => import('../views/Insumos.vue')
+  },
+  {
+    path: '/salidas',
+    name: 'Salidas',
+    component: () => import('../views/Salidas.vue')
+  },
+  {
+    path: '/informe',
+    name: 'Informe',
+    component: () => import('../views/Informe.vue')
   },
   
 ]

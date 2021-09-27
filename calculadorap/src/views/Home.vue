@@ -1,18 +1,9 @@
-<template>
-  <div class= "fondo">
-    <img src="../assets/img/fondo.jpg"  style="width:100%">
-  </div>
-
-</template>
+<template> </template>
 
 <script>
-  
+export default {
+  name: "Home",
 
-  export default {
-    name: 'Home',
-
-    components: {
-      
-    },
-  }
+  components: {},
+};
 </script>
