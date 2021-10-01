@@ -5,25 +5,24 @@
     </template>
     <v-card class="mx-auto" outlined>
         <form class="formulario">
-          <h3>Registro de ingresos</h3>
+          <h3>Registro de Tarea</h3>
           <div class="form-group">
             <label for="fechaRegistro">Fecha</label>
             <input
               class="date form-control"
               id="fechaRegistro"
               type="text"
-              placeholder="D/M/Y"
-              title="format: dd/MM/y"
+              placeholder="DD/MM/YYYY"
+              title="format: DD/MM/YYYY"
             />
           </div>
-
           <div class="form-group">
-            <label for="exampleInputEmail1">Proyecto</label>
+            <label for="exampleInputPassword1">Insumo</label>
             <input
               type="text"
               class="form-control"
-              id="nameProyecto"
-              placeholder="Nombre del proyecto"
+              id="insumo"
+              placeholder="Tipo de Insumo"
             />
           </div>
           <div class="form-group">
@@ -32,7 +31,7 @@
               type="text"
               class="form-control"
               id="cantidad"
-              placeholder="Cantidad a registrar"
+              placeholder="Peso en Kg"
             />
           </div>
           <div class="form-group">
@@ -41,12 +40,12 @@
               type="text"
               class="form-control"
               id="precioUnidad"
-              placeholder="Precio por unidad"
+              placeholder="Precio por Kg"
             />
           </div>
           <div class="text-center">
             <v-btn color="blue" dark  @click="dialog = false">
-              Registrar Insumo
+              Registrar Tarea
             </v-btn>
           </div>
         </form>

@@ -28,14 +28,9 @@ const routes = [
     component: () => import('../views/Dashboard.vue')
   },
   {
-    path: '/insumos',
-    name: 'Insumos',
-    component: () => import('../views/Insumos.vue')
-  },
-  {
-    path: '/salidas',
-    name: 'Salidas',
-    component: () => import('../views/Salidas.vue')
+    path: '/proyecto',
+    name: 'Proyecto',
+    component: () => import('../views/Proyecto.vue')
   },
   {
     path: '/informe',

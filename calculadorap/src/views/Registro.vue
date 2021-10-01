@@ -7,9 +7,7 @@
       <v-card-text class="text--primary" >
         <v-text-field label="Nombres" outlined></v-text-field>
         <v-text-field label="Apellidos" outlined></v-text-field>
-        <v-text-field label="Cédula" outlined></v-text-field>
         <v-text-field label="Correo electrónico" outlined></v-text-field>
-        <v-text-field label="Número celular" outlined></v-text-field>
         <v-text-field
             :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
             :type="show1 ? 'text' : 'password'" 

@@ -6,7 +6,7 @@
       elevate-on-scroll
       scroll-target="#scrolling-techniques-7"
     >
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <v-app-bar-nav></v-app-bar-nav>
 
       <v-toolbar-title>CALCULADORA PECUARIA</v-toolbar-title>
       <v-spacer></v-spacer>

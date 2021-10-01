@@ -1,13 +1,8 @@
 <template>
   <div id="dashboard">
-    <router-link to="/insumos" style="text-decoration: none">
+    <router-link to="/proyecto" style="text-decoration: none">
       <button type="button" class="btn btn-primary btn-lg">
-        Ingresar Insumos
-      </button>
-    </router-link>
-    <router-link to="/salidas" style="text-decoration: none">
-      <button type="button" class="btn btn-secondary btn-lg">
-        Registro de Salidas
+        Nuevo Proyecto
       </button>
     </router-link>
     <router-link to="/informe" style="text-decoration: none">
@@ -16,8 +11,8 @@
     <v-container>
         <v-row>
           <v-col
-          cols="12"
-          md="4">
+          cols="15"
+          md="5">
           <carta-proyectos></carta-proyectos>
           </v-col>
         </v-row>
