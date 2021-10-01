@@ -15,8 +15,8 @@
               class="date form-control"
               id="fechaSalida"
               type="text"
-              placeholder="D/M/Y"
-              title="format: dd/MM/y"
+              placeholder="DD/MM/YYYY"
+              title="format: DD/MM/YYY"
             />
           </div>
           <div class="form-group">
