@@ -1,6 +1,6 @@
 <template>
   <v-app id="fondo">
-    <NavBar></NavBar>
+    <nav-bar-principal></nav-bar-principal>
     <v-main class="fondo">
       <v-container class="fondo" fluid>
         <router-view></router-view>
@@ -10,11 +10,11 @@
 </template>
 
 <script>
-import NavBar from "./components/NavBar.vue";
+import NavBarPrincipal from "./components/NavBarPrincipal.vue";
 export default {
   name: "App",
   components: {
-    NavBar,
+    NavBarPrincipal,
   },
 };
 </script>

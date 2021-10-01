@@ -1,6 +1,7 @@
 <template>
   <div id="login">
-    <v-card class="mx-auto" outlined>
+    <NavBarPrincipal></NavBarPrincipal>
+    <v-card class="mx-auto" outlined >
       <div id="cabecera_login">
         <h2>INICIO DE SESIÓN</h2>
       </div>
@@ -24,11 +25,15 @@
 </template>
 
 <script>
+
+import NavBarPrincipal from "../components/NavBarPrincipal.vue";
+
 export default {
+  name: "Login",
+  components: {NavBarPrincipal,},
   data: () => {
     return {
-      show1: false,
-      password: "Password",
+      show1: false
     };
   },
 };

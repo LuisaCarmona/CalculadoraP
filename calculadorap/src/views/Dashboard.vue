@@ -1,5 +1,6 @@
 <template>
   <div id="dashboard">
+    <nav-bar-tareas></nav-bar-tareas>
     <router-link to="/proyecto" style="text-decoration: none">
       <button type="button" class="btn btn-primary btn-lg">
         Nuevo Proyecto
@@ -24,8 +25,9 @@
 </template>
 <script>
 import CartaProyectos from '../components/CartaProyectos.vue';
+import NavBarTareas from '../components/NavBarTareas.vue';
 export default {
-  components: { CartaProyectos },
+  components: { CartaProyectos, NavBarTareas },
   name: "Dashboard",
 };
 </script>

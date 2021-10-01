@@ -1,5 +1,6 @@
 <template>
   <div id="informe">
+    <nav-bar-tareas></nav-bar-tareas>
     <div id="dashboard">
       <router-link to="/informe" style="text-decoration: none">
         <button type="button" class="btn btn-primary btn-lg">Informes</button>
@@ -37,3 +38,15 @@
     </div>
   </div>
 </template>
+<script>
+import NavBarTareas from '../components/NavBarTareas.vue'
+export default {
+  name: "informe",
+  components: { NavBarTareas },
+
+}
+</script>
+
+<style>
+
+</style>

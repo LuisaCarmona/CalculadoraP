@@ -1,5 +1,6 @@
 <template>
   <div id="proyecto">
+    <nav-bar-tareas></nav-bar-tareas>
     <div id="dashboard">
       <router-link to="/proyecto" style="text-decoration: none">
         <button type="button" class="btn btn-primary btn-lg">
@@ -42,7 +43,9 @@
   </div>
 </template>
 <script>
+import NavBarTareas from '../components/NavBarTareas.vue';
 export default {
+  components: { NavBarTareas },
   name: "Proyecto",
 };
 </script>

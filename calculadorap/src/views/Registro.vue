@@ -1,11 +1,12 @@
 <template>
   <div id="registro">
-    <v-card class="mx-auto" outlined>
+    <NavBarPrincipal></NavBarPrincipal>
+    <v-card class="mx-auto" shaped >
       <div id = "cabecera_registro">
        <h2>REGISTRO DE USUARIOS</h2>
       </div> 
       <v-card-text class="text--primary" >
-        <v-text-field label="Nombres" outlined></v-text-field>
+        <v-text-field label="Nombres" outlined ></v-text-field>
         <v-text-field label="Apellidos" outlined></v-text-field>
         <v-text-field label="Correo electrónico" outlined></v-text-field>
         <v-text-field
@@ -25,11 +26,15 @@
 </template>
 
 <script>
+
+import NavBarPrincipal from "../components/NavBarPrincipal.vue";
+
 export default {
+  name: "Registro",
+  components: {NavBarPrincipal,},
   data: () => {
     return{
-      show1: false,
-      password: 'Password'
+      show1: false
     }
   }
 };
