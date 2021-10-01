@@ -102,3 +102,7 @@ body {
   margin: auto;
   text-align: center;
 }
+
+.bordeBotones{
+  border: 1px solid;
+}
