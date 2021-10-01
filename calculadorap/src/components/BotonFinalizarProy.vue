@@ -1,7 +1,7 @@
 <template>
   <v-dialog v-model="dialog" persistent max-width="600px">
     <template v-slot:activator="{ on, attrs }">
-        <v-btn outlined rounded text color="red" v-bind="attrs" v-on="on"> Finalizar Proyecto </v-btn>
+        <v-btn outlined rounded text color="green" v-bind="attrs" v-on="on"> Finalizar Proyecto </v-btn>
     </template>
     <v-card class="mx-auto" outlined>
         <form class="formulario">

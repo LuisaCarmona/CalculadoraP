@@ -32,6 +32,24 @@
               placeholder="Nombre del proyecto"
             />
           </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Cantidad Alevinos</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cantidad"
+              placeholder="Peso en Kilos"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Precio Unidad Alevino</label>
+            <input
+              type="text"
+              class="form-control"
+              id="precioUnidad"
+              placeholder="Precio por Kilo"
+            />
+          </div>
           <div class="text-center">
             <button type="submit" class="btn btn-primary">
               Crear Proyecto

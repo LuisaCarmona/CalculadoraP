@@ -15,9 +15,9 @@
           </v-app-bar>
 
         <v-card-text>
-      <p>Peso Inicial{{peso_inicial}}</p>
+      <p>Compras {{compras}}</p>
+      <p>Canditad Comprada{{cantidad_compra}}</p>
       <p>Precio Compra{{precio_compra}}</p>
-      <p>Fecha Creación {{fecha_de_creacion}}</p>
     </v-card-text>
     <v-card-actions>
       <v-row>

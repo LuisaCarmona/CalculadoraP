@@ -1,40 +1,22 @@
 <template>
-    <v-dialog
-      v-model="dialog"
-      persistent
-      max-width="290"
-    >
+    <v-dialog v-model="dialog" persistent max-width="290">
       <template v-slot:activator="{ on, attrs }">
-          <v-btn
-              color="red"
-              icon
-              v-bind="attrs"
-                v-on="on"
-            >
+          <v-btn color="red" icon v-bind="attrs" v-on="on">
             <v-icon>mdi-delete</v-icon>
-              <!--  -->
             </v-btn>
       </template>
       <v-card>
         <v-card-title class="text-h5">
-          Use Google's location service?
+          ¿Desea eliminar esté proyecto?
         </v-card-title>
-        <v-card-text>Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.</v-card-text>
+        <v-card-text>Por favor confirme que desea eliminar esté proyecto</v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn
-            color="green darken-1"
-            text
-            @click="dialog = false"
-          >
-            Disagree
+          <v-btn color="green darken-1" text @click="dialog = false">
+            Denegar
           </v-btn>
-          <v-btn
-            color="green darken-1"
-            text
-            @click="dialog = false"
-          >
-            Agree
+          <v-btn color="green darken-1" text @click="dialog = false">
+            Confirmar
           </v-btn>
         </v-card-actions>
       </v-card>

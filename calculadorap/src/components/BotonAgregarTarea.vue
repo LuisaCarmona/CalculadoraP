@@ -31,7 +31,7 @@
               type="text"
               class="form-control"
               id="cantidad"
-              placeholder="Peso en Kg"
+              placeholder="Peso en Kilos"
             />
           </div>
           <div class="form-group">
@@ -40,7 +40,7 @@
               type="text"
               class="form-control"
               id="precioUnidad"
-              placeholder="Precio por Kg"
+              placeholder="Precio por Kilo"
             />
           </div>
           <div class="text-center">
