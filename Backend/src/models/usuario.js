@@ -9,11 +9,11 @@ const usuarioSchema = new Schema({
     },
     email:{
         type: String,
-        require: [true, 'El nombre es obligatorio']
+        require: [true, 'El email es obligatorio']
     },
     contrasena:{
         type: String,
-        require: [true, 'El nombre es obligatorio']
+        require: [true, 'La contraseña es obligatoria']
     }
 },{
     collection:'usuarios'

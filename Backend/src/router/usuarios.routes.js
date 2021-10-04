@@ -11,6 +11,8 @@ class usuarioRoutes{
         this.router.post('/', usuarioController.crear)
         this.router.get('/', usuarioController.listar)
         this.router.post('/login', usuarioController.iniciarSesion)
+        this.router.put('/', usuarioController.actualizar)
+        this.router.delete('/', usuarioController.eliminar)
     }
 }
 module.exports = usuarioRoutes;

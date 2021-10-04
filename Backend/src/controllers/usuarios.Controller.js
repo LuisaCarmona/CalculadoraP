@@ -31,10 +31,27 @@ class UsuarioController{
         } )
     }
     actualizar(req, res){
-        
+        let {id, nombre, email, contrasena};
+        let obj = {nombre, email, contrasena}
+        usuario.findByIdAndUpdate(id, {$set: obj}, (error, data)=> {
+            if(error){  
+            res.status(500).json ({error});
+         }else {
+             res.status(200).json(data);
+         }    
+         } );   
     }
+
     eliminar(req, res){
-        
+        let { id } = req.body;
+         
+         usuario.findByIdAndRemove(id, (error, data) =>{
+             if(error){
+                 res.status(500).send();
+             }else {
+                 res.status(200).json(data);
+             }
+         });
     }
     iniciarSesion(req, res){
         const email = req.body.email
