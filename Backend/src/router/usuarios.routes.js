@@ -4,15 +4,16 @@ const UsuarioController = require('../controllers/usuarios.Controller');
 class usuarioRoutes{
     constructor(){
         this.router = express.Router();
-        this.config()
+        this.config();
     }
     config(){
         const usuarioController = new UsuarioController();
         this.router.post('/', usuarioController.crear)
         this.router.get('/', usuarioController.listar)
-        this.router.post('/login', usuarioController.iniciarSesion)
+        this.router.get('/:email', usuarioController.busquedaPorEmail)
+        this.router.get('/login', usuarioController.iniciarSesion)
         this.router.put('/', usuarioController.actualizar)
-        this.router.delete('/', usuarioController.eliminar)
+        this.router.delete('/:id', usuarioController.eliminar)
     }
 }
 module.exports = usuarioRoutes;

@@ -1,82 +1,120 @@
 const usuario = require('../models/usuario')
 
-class UsuarioController{
-    crear(req, res){
-        const email = req.body.email
-        usuario.create(req.body, (error, data)=>{
-            if (error){
-            res.status(500).json({error})
-        }else{
-            if(usuario.find({email})){
+class UsuarioController {
+    crear(req, res) {
+        // usuario.findOne({ email: correo }, (error, data) => {
+        // if (error) {
+        //  res.status(500).json({ error });
+        // } else if (data == null) {
+        usuario.create(req.body, (err, datos) => {
+            if (err) {
                 res.status(500).json({
-                    mensaje: "Usuario existente"
-                })
-            }else{
-            res.status(201).json({
-                mensaje: "usuario creado correctamente",
-                datos: data,
-            })
-        }
-        }
-    })
-}
-    listar(req, res){
-        usuario.find((error, data)=>{
-            if(error){
-                res.status(500).json(
-                    {error})
-            }else{
-                res.status(200).json(data)
+                    err
+                });
+            } else {
+                res.status(201).json({
+                    mensaje: "usuario creado correctamente",
+                    datos: datos,
+                });
             }
-        } )
+        });
+        //    }
+        ///});
     }
-    actualizar(req, res){
-        let {id, nombre, email, contrasena};
-        let obj = {nombre, email, contrasena}
-        usuario.findByIdAndUpdate(id, {$set: obj}, (error, data)=> {
-            if(error){  
-            res.status(500).json ({error});
-         }else {
-             res.status(200).json(data);
-         }    
-         } );   
+    busquedaPorEmail(req, res) {
+        const correo = req.params.email;
+        usuario.findOne({
+            email: correo
+        }, (error, data) => {
+            if (error) {
+                res.status(500).json({
+                    error
+                });
+            } else if (data == null) {
+                res.status(200).json({
+                    existe: false
+                })
+            } else {
+                res.status(200).json({
+                    existe: true
+                })
+            }
+        })
+    }
+    listar(req, res) {
+        usuario.find((error, data) => {
+            if (error) {
+                res.status(500).json({
+                    error
+                });
+            } else {
+                res.status(200).json(data);
+            }
+        });
+    }
+    actualizar(req, res) {
+        let {
+            id,
+            nombre,
+            email,
+            contrasena
+        } = req.body;
+        let obj = {
+            nombre,
+            email,
+            contrasena
+        };
+        usuario.findByIdAndUpdate(id, {
+            $set: obj
+        }, (error, data) => {
+            if (error) {
+                res.status(500).json({
+                    error
+                });
+            } else {
+                res.status(200).json(data);
+            }
+        });
     }
 
-    eliminar(req, res){
-        let { id } = req.body;
-         
-         usuario.findByIdAndRemove(id, (error, data) =>{
-             if(error){
-                 res.status(500).send();
-             }else {
-                 res.status(200).json(data);
-             }
-         });
-    }
-    iniciarSesion(req, res){
-        const email = req.body.email
-        const contrasena = req.body.contrasena
-        usuario.find({email: email}, (error, data)=>{
-            if(error){
-                res.status(404).json({
-                    mensaje: "Usuario no registrado"
-                })
-            }else{
-                if (contrasena === data.contrasena){
-                    res.status(200).json({
-                        login: true,
-                        contrasena: contra,
-                        data
-                    })
-                }else{
-                    res.status(406).json({
-                        login: false,
-                        contrasena: contra,
-                        data
-                    })
-                }
+    eliminar(req, res) {
+        let {
+            id
+        } = req.params;
+
+        usuario.findByIdAndRemove(id, (error, data) => {
+            if (error) {
+                res.status(500).send();
+            } else {
+                res
+                    .status(200)
+                    .json(data, (mensaje = "usuario eliminado correctamente"));
             }
-        }) 
+        });
+    }
+    iniciarSesion(req, res) {
+        let e = req.body.email;
+        let c = req.body.contrasena;
+        usuario.findOne({
+            email: e,
+            contrasena: c
+        }, (error, data) => {
+            if (error) {
+                res.status(404).json({
+                    mensaje: "Error al iniciar sesión",
+                });
+            } else if (data == null) {
+                res.status(200).json({
+                    login: false,
+                    mensaje: "Datos incorrectos",
+                });
+            } else {
+                res.status(200).json({
+                    login: true,
+                    data,
+                });
+            }
+        });
     }
 }
 

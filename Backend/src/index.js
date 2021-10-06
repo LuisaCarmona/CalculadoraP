@@ -2,17 +2,19 @@
 const express = require("express");
 const dbConnection = require("./database/dbConnection");
 const rutaUsuario = require("./router/usuarios.routes");
+const cors  = require("cors")
 
 class Servidor{
   //Constructor
   constructor(){
     const dbCont = new dbConnection();
-    // se crea objeto express
+    // Aplicación express para montar el servidor
     this.app = express();
     this.confic();
   }
 
   confic(){
+    this.app.use(cors());
         // Indicar el puerto por el que se monta el servidor
         this.app.set("port", process.env.PORT || 3000);
         // se manejarán solicitudes en json

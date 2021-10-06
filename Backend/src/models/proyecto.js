@@ -3,14 +3,17 @@ const Schema = mongoose.Schema;
 
 
 const proyectoSchema = new Schema({
-    peso_compra:{
+    id_usuario:{
         type: String, require: [true, 'El nombre es obligatorio']
+    },
+    peso_compra:{
+        type: String, require: [true, 'El peso es obligatorio']
     },
     precio_compra:{
-        type: Number, require: [true, 'El nombre es obligatorio']
+        type: Number, require: [true, 'El precio es obligatorio']
     },
     nombre_proyecto:{
-        type: String, require: [true, 'El nombre es obligatorio']
+        type: String, require: [true, 'El nombre del proyecto es obligatorio']
     },
     fecha_creación:{
         type: Date, default: Date.now
