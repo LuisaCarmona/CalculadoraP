@@ -15,4 +15,4 @@ const proyectoSchema = new Schema({
     collection:'tarea'
 });
 
-module.exports= mongoose.models('tarea', proyectoSchema)
+module.exports= mongoose.model('tarea', proyectoSchema)

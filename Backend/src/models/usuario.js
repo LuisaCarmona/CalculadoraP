@@ -7,6 +7,10 @@ const usuarioSchema = new Schema({
         type: String,
         require: [true, 'El nombre es obligatorio']
     },
+    apellido:{
+        type: String,
+        require: [true, "El apellido es obligatorio"]
+    },
     email:{
         type: String,
         require: [true, 'El email es obligatorio']

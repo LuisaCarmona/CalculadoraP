@@ -8,8 +8,8 @@ class usuarioRoutes{
     }
     config(){
         const usuarioController = new UsuarioController();
-        this.router.post('/', usuarioController.crear)
-        this.router.get('/', usuarioController.listar)
+        this.router.post('/registro', usuarioController.crear)
+        this.router.get('/registro', usuarioController.listar)
         this.router.get('/:email', usuarioController.busquedaPorEmail)
         this.router.get('/login', usuarioController.iniciarSesion)
         this.router.put('/', usuarioController.actualizar)
