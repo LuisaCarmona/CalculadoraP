@@ -4,8 +4,7 @@ const dbConnection = require("./database/dbConnection");
 const rutaUsuario = require("./router/usuarios.routes");
 const proyectoRoutes = require("./router/proyectos.routes");
 const tareasRoutes = require("./router/tareas.routes");
-
-const cors  = require("cors")
+const cors = require('cors');
 
 class Servidor{
   //Constructor
@@ -23,7 +22,12 @@ class Servidor{
         // se manejarán solicitudes en json
         this.app.use(express.json());
         // indicar conexiones de origen cruzado
-        this.app.use(cors());
+        this.app.use(cors(
+          {
+            origin:"*",
+            methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+          }
+        ));
         // crear ruta de inicio
         const ruta = express.Router();
         ruta.get("/", (request, response) => {

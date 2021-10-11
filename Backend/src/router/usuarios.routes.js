@@ -8,12 +8,12 @@ class usuarioRoutes{
     }
     config(){
         const usuarioController = new UsuarioController();
-        this.router.post('/registro', usuarioController.crear)
-        this.router.get('/registro', usuarioController.listar)
+        this.router.post('/usuario', usuarioController.crear)
+        this.router.get('/usuario', usuarioController.listar)
         this.router.get('/:email', usuarioController.busquedaPorEmail)
-        this.router.get('/login', usuarioController.iniciarSesion)
+        this.router.post('/usuario/login', usuarioController.iniciarSesion)
         this.router.put('/', usuarioController.actualizar)
-        this.router.delete('/:id', usuarioController.eliminar)
+        this.router.delete('/usuario/:id', usuarioController.eliminar)
     }
 }
 module.exports = usuarioRoutes;

@@ -6,7 +6,7 @@ class UsuarioController {
         // if (error) {
         //  res.status(500).json({ error });
         // } else if (data == null) {
-        usuario.create(req.body, (err, datos) => {
+        usuario.create(req.body, (err, data) => {
             if (err) {
                 res.status(500).json({
                     err
@@ -14,7 +14,7 @@ class UsuarioController {
             } else {
                 res.status(201).json({
                     mensaje: "usuario creado correctamente",
-                    datos: datos,
+                    data,
                 });
             }
         });
@@ -97,22 +97,29 @@ class UsuarioController {
         let c = req.body.contrasena;
         usuario.findOne({
             email: e,
-            contrasena: c
         }, (error, data) => {
             if (error) {
-                res.status(404).json({
+                res.status(500).json({
                     mensaje: "Error al iniciar sesión",
                 });
             } else if (data == null) {
-                res.status(200).json({
+                res.status(202).json({
                     login: false,
-                    mensaje: "Datos incorrectos",
+                    mensaje: "Usuario no registrado",
                 });
             } else {
-                res.status(200).json({
-                    login: true,
-                    data,
-                });
+                if(c === data.contrasena){
+                    res.status(200).json({
+                        login: true,
+                        data,
+                    });
+                }else{
+                    res.status(201).json({
+                        login: false,
+                        mensaje: "Contraseña incorrecta",
+                    });
+                }
+                
             }
         });
     }

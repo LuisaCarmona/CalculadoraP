@@ -14,7 +14,7 @@ export default new Vuex.Store({
   },
   actions: {
     async registrarUsuario({commit}, payload){
-      const peticion = fetch("http://localhost:3000/registro", {
+      const peticion = fetch("http://localhost:3000/usuario", {
          method: 'POST', 
          headers: {
            'content-type': 'application/json'
@@ -25,7 +25,7 @@ export default new Vuex.Store({
       const data = await (await peticion).json();
       console.log(peticion);
       console.log(data);
-    }
+    },
   },
   modules: {
   }
